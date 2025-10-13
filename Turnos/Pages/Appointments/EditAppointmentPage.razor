@@ -1,0 +1,63 @@
+﻿@using Turnos.Model.UI
+@using Turnos.SharedKernel.Interfaces.Services
+
+@inject DialogService DialogService
+@inject IAppointmentService AppointmentService
+@inject IPacienteService PacientesService
+@inject IProfesionalService ProfesionalesService
+
+<RadzenTemplateForm TItem="AppointmentDto" Data="@model" Submit=@OnSubmit>
+    <div class="row" style="margin-bottom: 16px">
+        <div class="col-md-3">
+            <RadzenLabel Text="Profesional" />
+        </div>
+        <div class="col">
+            <RadzenAutoComplete Placeholder="Buscar Profesional" @bind-Value=@model.Profesional Name="Profesional" Data=@profesionales TextProperty="FullName" LoadData=@OnLoadProfesionales FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive">
+                <Template Context="ctx">
+                    @ctx.Nombre @ctx.Apellido
+                </Template>
+            </RadzenAutoComplete>
+            <RadzenRequiredValidator Text="Profesional es requerido" Component="Profesional" />
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 16px">
+        <div class="col-md-3">
+            <RadzenLabel Text="Paciente" />
+        </div>
+        <div class="col">
+            <RadzenAutoComplete Placeholder="Buscar Paciente" @bind-Value=@model.Paciente Name="Paciente" Data=@pacientes TextProperty="FullName" LoadData=@OnLoadPacientes FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive">
+                <Template Context="ctx">
+                    @ctx.Nombre @ctx.Apellido
+                </Template>
+            </RadzenAutoComplete>
+            <RadzenRequiredValidator Text="Paciente es requerido" Component="Paciente" />
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 16px">
+        <div class="col-md-3">
+            <RadzenLabel Text="Fecha Inicio" />
+        </div>
+        <div class="col">
+            <RadzenDatePicker @bind-Value="@model.Start" Name="Start" ShowTime="true" />
+            <RadzenRequiredValidator Text="Start es requerido" Component="Start" />
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 16px">
+        <div class="col-md-3">
+            <RadzenLabel Text="Fecha Fin" />
+        </div>
+        <div class="col">
+            <RadzenDatePicker Name="End" @bind-Value="@model.End" ShowTime="true" />
+            <RadzenRequiredValidator Component="End" Text="End es requerido" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col">
+            <RadzenButton ButtonType="ButtonType.Submit" Text="Guardar" />
+            <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="cancel" Text="Eliminar" Click="@(() => Eliminar(model.Id))" />
+        </div>
+    </div>
+</RadzenTemplateForm>

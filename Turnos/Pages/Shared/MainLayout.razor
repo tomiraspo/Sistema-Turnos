@@ -1,0 +1,206 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Identity
+@using Turnos.Domain.Entities
+
+@inject NavigationManager NavigationManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<RadzenDialog />
+<RadzenNotification />
+<RadzenContextMenu />
+<RadzenTooltip />
+
+<main class="d-flex flex-column">
+    <div class="site-content">
+        <div class="container-fluid g-0 h-100">
+            <div class="row g-0 h-100">
+                <div class="col-xl-2 d-xl-block">
+                    <div class="d-xl-block d-none fixed sidebar-base">
+                        <div class="sidebar primary-menu">
+                            <div class="sidebar-content-wrapper">
+                                <div class="sidebar-content shadow-sm">
+                                    <nav class="navbar shadow main-nav navbar-expand-xl " id="primary-navigation">
+                                        <div class="" id="main_nav">
+                                            <AuthorizeView>
+                                                <Authorized>
+                                                    <ul class="navbar-nav me-auto primary-nav">
+                                                        <li class="nav-item top-level @((NavigationManager.Uri.Equals(NavigationManager.BaseUri)) ? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/">
+                                                                <span class="icon icon-menu icon-menu-home"></span> Home
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level @((NavigationManager.Uri.EndsWith("/turnos")) ? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/turnos">
+                                                                <span class="icon icon-menu icon-menu-calendar"></span> Turnos
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level @(NavigationManager.Uri.Contains("pacientes")? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/pacientes">
+                                                                <span class="icon icon-menu icon-menu-team"></span> Ingreso de Pacientes
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level @(NavigationManager.Uri.Contains("profesionales")? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/profesionales">
+                                                                <span class="icon icon-menu icon-menu-medic"></span> Ingreso de Profesionales
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level @(NavigationManager.Uri.Contains("parte")? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/parte">
+                                                                <span class="icon icon-menu icon-menu-notes"></span> Parte Diario
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level @(NavigationManager.Uri.Contains("licencias")? "active" : "") scroll-item">
+                                                            <a class="nav-link" href="/licencias">
+                                                                <span class="icon icon-menu icon-menu-clock"></span> Licencias
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </Authorized>
+                                            </AuthorizeView>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-xl-none nav-mobile primary-menu">
+                        <div class="container-fluid">
+                            <div class="logo ps-3">
+                            </div>
+
+                            <div class="logo">
+                            </div>
+
+                            <button id="btnNavToggle" class="navbar-toggler collapsed ps-3"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#primary_nav" aria-controls="primary_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"><span class="header-icon c-i-hamburger-menu"></span></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="primary_nav">
+                                <AuthorizeView>
+                                    <Authorized>
+                                        <ul class="navbar-nav me-auto primary-nav">
+                                            <li class="nav-item top-level @((NavigationManager.Uri.Equals(NavigationManager.BaseUri)) ? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/">
+                                                    <span class="icon icon-menu icon-menu-home"></span> Home
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level @((NavigationManager.Uri.EndsWith("/turnos")) ? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/turnos">
+                                                    <span class="icon icon-menu icon-menu-calendar"></span> Turnos
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level @(NavigationManager.Uri.Contains("pacientes")? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/pacientes">
+                                                    <span class="icon icon-menu icon-menu-team"></span> Ingreso de Pacientes
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level @(NavigationManager.Uri.Contains("profesionales")? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/profesionales">
+                                                    <span class="icon icon-menu icon-menu-medic"></span> Ingreso de Profesionales
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/parte">
+                                                    <span class="icon icon-menu icon-menu-notes"></span> Parte Diario
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level @(NavigationManager.Uri.Contains("parte")? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/parte">
+                                                    <span class="icon icon-menu icon-menu-notes"></span> Parte Diario
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level @(NavigationManager.Uri.Contains("licencias")? "active" : "") scroll-item">
+                                                <a class="nav-link" href="/licencias">
+                                                    <span class="icon icon-menu icon-menu-clock"></span> Licencias
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </Authorized>
+                                </AuthorizeView>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-10">
+                    <div class="page-content-wrapper">
+                        <div class="page-content-top">
+                            <div class="profile-bar-container shadow-sm mb-0">
+                                <div class="profile-bar">
+                                    <div class="row g-0">
+                                        <div class="col-xxl-9 col-xl-8 col-lg-7 col-3">
+                                            <div class="profile-content ps-3">
+                                                <!--TODO: Agregar breadcrumb-->
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-4 col-lg-5 col-9">
+                                            <div class="profile-user">
+                                                <div class="dropdown">
+                                                    <AuthorizeView>
+                                                        <Authorized>
+                                                            @{
+                                                                var user = UserManager.GetUserAsync(context.User).Result;
+                                                            }
+                                                            <button class="btn dropdown-toggle " aria-label="User Profile"
+                                                                    type="button" id="user-profile-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <span class="align-bottom userbuttonname d-inline-block">Bienvenido</span>
+                                                                <span title="@user.UserName" class="align-bottom userbuttonname text-truncate d-inline-block">@user.UserName</span>
+                                                                <span class="align-bottom d-inline-block ms-2 me-3 profile-circle c-i-profile-solid"></span>
+                                                            </button>
+
+                                                            <ul class="dropdown-menu dropdown-profile" aria-labelledby="user-profile-dropdown">
+                                                                <li>
+                                                                    <a class="nav-link" href="Identity/Account/LogOut">Cerrar Sesión</a>
+                                                                </li>
+                                                            </ul>
+                                                        </Authorized>
+                                                        <NotAuthorized>
+                                                            <ul style="display:flex; margin: 0 auto; list-style:none">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link login-link" href="/Identity/Account/Register">Registrarse</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link login-link" href="/Identity/Account/Login">Iniciar Sesión</a>
+                                                                </li>
+                                                            </ul>
+                                                        </NotAuthorized>
+                                                    </AuthorizeView>
+                                                </div>
+                                                @*@(await Html.PartialAsync("_LoginPartial"));*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0 p-4">
+                                <div class="col-12">
+                                    <div class="page-content">
+                                        <div class="page">
+                                            <main>
+                                                <article class="content px-4">
+                                                    @Body
+                                                </article>
+                                            </main>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content-bottom">
+                            <footer class="footer">
+                                <div class="container-fluid">
+                                    <div class="row pt-3 m-0">
+                                        <div class="col-xl-6 col-lg-12 ps-5 order-2 order-xl-1"><span class="small">Microservicios - Sysgest - 2023</span></div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+

@@ -1,0 +1,89 @@
+﻿@page "/profesionales"
+
+@using Turnos.Model.UI
+@using Turnos.SharedKernel.Interfaces.Services
+@inject DialogService DialogService
+
+<RadzenTemplateForm Data="@profesionalUpdateDto" Submit="@((ProfesionalDto args) => { Submit(args); })">
+    <RadzenRow Gap="2rem" Class="rz-p-0 rz-p-lg-4">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack>
+                <RadzenFieldset Text="Ingreso Profesional">
+                    <RadzenStack Gap="1rem">
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="Nombre" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.Nombre" Name=" Nombre" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="Apellido" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.Apellido" Name="Apellido" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="DNI" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.DNI" Name="DNI" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="Matricula" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.Matricula" Name="Matricula" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="Telefono" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.Telefono" Name="Telefono" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="Mail" />
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenTextBox Style="width: 100%;" @bind-Value="profesionalUpdateDto.Mail" Name="Mail" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack>
+                <RadzenFieldset Text="Profesionales">
+                    <RadzenDataGrid EmptyText="No hay registros en la base de datos" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                                    Data="@profesionales" TItem="ProfesionalDto" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or">
+                        <Columns>
+                            <RadzenDataGridColumn TItem="ProfesionalDto" Property="Id" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+                            <RadzenDataGridColumn TItem="ProfesionalDto" Property="Nombre" Title="Nombre" Frozen="true" Width="160px" />
+                            <RadzenDataGridColumn TItem="ProfesionalDto" Property="Apellido" Title="Apellido" Frozen="true" Width="160px" />
+                            <RadzenDataGridColumn TItem="ProfesionalDto" Title="Accion" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                                <Template Context="data">
+                                    <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Click="@(async() => await ShowConfirmationDialog(data.Id))"></RadzenButton>
+                                </Template>
+                            </RadzenDataGridColumn>
+                        </Columns>
+                    </RadzenDataGrid>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Left" Gap="1rem" Class="rz-mt-8 rz-mb-4">
+        <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="Confirmar" />
+        <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Large" Icon="cancel" Text="Cancelar" Click="@Cancel" />
+    </RadzenStack>
+</RadzenTemplateForm>

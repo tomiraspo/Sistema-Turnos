@@ -1,0 +1,37 @@
+﻿@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Cerrar Sesion";
+}
+
+<header>
+    @{
+        if (User.Identity.IsAuthenticated)
+        {
+            
+
+            <div class="container" style="padding: 10px;">
+                <div class="row">
+                   
+                    <div class="col-md-6">
+                        <div style="text-align:center">
+                            <img style="display: inline-block" src="~/images/ioba.png" alt="welcome" />
+                            <h2>Muchas gracias por visitarnos!</h2>
+
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                <button type="submit" style="margin:0 auto;" class="nav-link btn btn-link text-dark">Clickear para cerrar Sesion</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="text-align:center">
+                        <img src="~/images/nene.png" style="width:100%" alt="welcome" />
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>Te deslogueaste correctamente.</p>
+        }
+    }
+</header>

@@ -1,0 +1,1098 @@
+:root {
+    --bs-blue: #003B5C;
+    --bs-indigo: #6610f2;
+    --bs-purple: #8A5AA9;
+    --bs-pink: #d63384;
+    --bs-red: #D1344F;
+    --bs-orange: #f68d2e;
+    --bs-yellow: #ffc107;
+    --bs-green: #509e2f;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #54585A;
+    --bs-gray-200: #f2f2f2;
+    --bs-gray-300: #F2F2F2;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #a1a1a1;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #222222;
+    --bs-gray-900: #212529;
+    --bs-primary: #003B5C;
+    --bs-secondary: #97999B;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #D1344F;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 0, 59, 92;
+    --bs-secondary-rgb: 151, 153, 155;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 209, 52, 79;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: "LatoWeb", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: "LatoWeb", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-body-font-size: 0.9rem;
+    --bs-body-font-weight: normal;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --fman-highlight: #ebf6fd;
+}
+
+a {
+    text-decoration: none;
+}
+
+.word {
+    font-size: 20px;
+    font-family: "LatoWebBold", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--bs-primary);
+}
+
+.sidebar-base {
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--bs-primary);
+}
+
+.sidebar {
+    height: 100%;
+}
+
+    .sidebar .sidebar-content-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+        .sidebar .sidebar-content-wrapper .sidebar-content {
+            border-radius: 10px;
+            background-position: bottom 40px left -100px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+            .sidebar .sidebar-content-wrapper .sidebar-content .logo {
+                padding-top: 64px;
+                text-align: center;
+            }
+
+            .sidebar .sidebar-content-wrapper .sidebar-content .gap {
+                height: 64px;
+                line-height: 64px;
+                text-align: center;
+            }
+
+    .sidebar .navbar {
+        margin-top: 2rem;
+        flex-direction: column;
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .sidebar .navbar .navbar-nav {
+            flex-direction: column;
+            width: 100%;
+        }
+
+    .sidebar .nav-item-signout {
+        margin-top: 5rem;
+    }
+
+.nav-mobile {
+    background: #EDF5F7;
+}
+
+    .nav-mobile .navbar-toggler {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+.navbar.navbar-toggler.collapsed {
+    background-color: yellow;
+}
+
+#btnNavToggle:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.primary-menu .nav-link {
+    color: var(--bs-body-bg);
+    font-family: "Avenir Medium", "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    line-height: 2rem;
+}
+
+.primary-menu .nav-link {
+    color: var(--bs-body-bg);
+    font-family: "Avenir Medium", "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    line-height: 2rem;
+}
+
+.primary-menu li {
+    display: inline-block;
+    width: 100%;
+}
+
+    .primary-menu li:last-child {
+        border-bottom: none;
+    }
+
+.primary-menu li {
+    display: inline-block;
+    width: 100%;
+}
+
+    .primary-menu li:last-child {
+        border-bottom: none;
+    }
+
+
+
+.nav-mobile .logo {
+    display: inline-block;
+    height: 61px;
+    padding-top: 12px;
+}
+
+.nav-mobile .navbar-toggler {
+    float: right;
+    height: 61px;
+    padding-top: 12px;
+    margin-right: 1rem;
+}
+
+.primary-menu.show {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+}
+
+    .primary-menu.show #main_nav {
+        width: 100%;
+    }
+
+.c-i-hamburger-menu::before {
+    content: url("../images/hamburguer.svg");
+}
+
+.primary-menu.show .c-i-hamburger-menu::before {
+    content: url("../images/diagonal.svg");
+}
+
+.navbar-toggler-icon {
+    max-width: 25px;
+}
+
+.primary-menu.show .navbar-collapse {
+    margin-top: 32px;
+    display: block !important;
+}
+
+.primary-menu.show .navbar {
+    box-shadow: none !important;
+}
+
+.profile-bar-container {
+    margin: 1.5em;
+    border-radius: 5px;
+}
+
+    .profile-bar-container .profile-bar {
+        width: 100%;
+        height: 57px;
+        border-radius: 5px;
+    }
+
+        .profile-bar-container .profile-bar .row {
+            height: 100%;
+        }
+
+        .profile-bar-container .profile-bar .profile-content {
+            background: var(--bs-primary);
+            background-position: top right -1px;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: 100%;
+            height: 100%;
+        }
+
+            .profile-bar-container .profile-bar .profile-content .breadcrumb li,
+            .profile-bar-container .profile-bar .profile-content .breadcrumb a,
+            .profile-bar-container .profile-bar .profile-content .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+                color: var(--bs-body-bg);
+            }
+
+        .profile-bar-container .profile-bar .profile-user {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: var(--bs-primary);
+        }
+
+            .profile-bar-container .profile-bar .profile-user .btn span, .profile-bar-container .profile-bar .profile-user .btn-subscribe span, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn input, .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe input, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon input, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon input, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .card input.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .card input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn-subscribe input.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon input.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon input.form-control, .profile-bar-container .profile-bar .profile-user .btn .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group .profile-bar-container .profile-bar .profile-user .btn span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .form-table-group .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card .profile-bar-container .profile-bar .profile-user .btn span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .card .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .card .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .card .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .card .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn input.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe input.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon input.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon input.form-control, .profile-bar-container .profile-bar .profile-user .btn .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn span.form-control, .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn span.form-control, .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .card .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group input.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn-subscribe input.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon input.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group input.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon input.form-control, .profile-bar-container .profile-bar .profile-user .btn .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .btn-subscribe span.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon span.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon span.form-control, .profile-bar-container .profile-bar .profile-user .btn .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .profile-bar-container .profile-bar .profile-user .btn-subscribe .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn input.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .btn-subscribe input.form-control, .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user .blazored-typeahead .blazored-typeahead__input-icon input.form-control, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date input.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date .blazored-typeahead .profile-bar-container .profile-bar .profile-user .blazored-typeahead__input-icon input.form-control {
+                color: var(--bs-body-bg);
+            }
+
+            .profile-bar-container .profile-bar .profile-user .dropdown .dropdown-toggle::after, .profile-bar-container .profile-bar .profile-user .dropdown .blazored-typeahead .blazored-typeahead__input-icon::after, .blazored-typeahead .profile-bar-container .profile-bar .profile-user .dropdown .blazored-typeahead__input-icon::after {
+                display: none;
+            }
+
+            .profile-bar-container .profile-bar .profile-user .dropdown-menu.show {
+                width: 100%;
+            }
+
+                .profile-bar-container .profile-bar .profile-user .dropdown-menu.show li {
+                    border-bottom: 1px solid var(--csc-blue-gray-tint-1);
+                    line-height: 2rem;
+                }
+
+                .profile-bar-container .profile-bar .profile-user .dropdown-menu.show .dropdown-item.active {
+                    background: var(--bs-primary);
+                }
+
+                .profile-bar-container .profile-bar .profile-user .dropdown-menu.show li:last-of-type {
+                    border-bottom: none;
+                }
+
+            .profile-bar-container .profile-bar .profile-user .profile-circle {
+                background-color: var(--bs-body-bg);
+                width: 23px;
+                height: 23px;
+                line-height: 22px;
+                color: var(--bs-primary) !important;
+                border-radius: 11.5px;
+                border: 2px solid var(--bs-primary);
+                text-align: center;
+            }
+
+            .profile-bar-container .profile-bar .profile-user span:nth-of-type(1), .profile-bar-container .profile-bar .profile-user .ext-dashboard .dashboard-box .card-body .dx-styless-date input:nth-of-type(1), .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user input:nth-of-type(1) {
+                font-family: "Avenir Medium", "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+            .profile-bar-container .profile-bar .profile-user span:nth-of-type(2), .profile-bar-container .profile-bar .profile-user .ext-dashboard .dashboard-box .card-body .dx-styless-date input:nth-of-type(2), .ext-dashboard .dashboard-box .card-body .dx-styless-date .profile-bar-container .profile-bar .profile-user input:nth-of-type(2) {
+                max-width: 185px;
+                font-family: "Avenir Heavy", "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+.c-i-profile-solid:before {
+    content: url("../images/profile.svg");
+    background-color: #003B5C;
+}
+
+.icon-body {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+    background: var(--csc-blue-gray-tint-1);
+    border-radius: 16px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.icon-menu {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+    background: var(--bs-primary);
+    border-radius: 16px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+    .icon-menu::before {
+        position: relative;
+        display: inline-block;
+        background-color: var(--bs-body-bg);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 25px 25px;
+        -webkit-mask-position: center center;
+        margin: 0 auto;
+        width: 32px;
+        height: 32px;
+    }
+
+.icon-court-widget::before {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 105px;
+}
+
+.icon-task-widget::before {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 80px;
+}
+
+.icon-widget::before {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 85px;
+}
+
+.icon-event-widget::before {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 100px;
+}
+
+.active .icon-menu {
+    background-color: var(--fman-highlight);
+}
+
+    .active .icon-menu::before {
+        background-color: var(--bs-primary);
+    }
+
+.icon-menu::before {
+    content: "";
+}
+
+.icon-menu-home::before {
+    -webkit-mask-image: url("../images/icon_menu_home.svg");
+}
+
+.icon-menu-team::before {
+    -webkit-mask-image: url("../images/team.svg");
+}
+
+.icon-menu-cup::before {
+    -webkit-mask-image: url("../images/ranking.svg");
+}
+
+.icon-menu-calendar::before {
+    -webkit-mask-image: url("../images/calendar.svg");
+}
+
+.icon-menu-notes::before {
+    -webkit-mask-image: url("../images/class-notes.svg");
+}
+
+.icon-menu-medic::before {
+    -webkit-mask-image: url("../images/medic.svg");
+}
+
+.icon-menu-event::before {
+    -webkit-mask-image: url("../images/icon_menu_event.svg");
+}
+
+.icon-menu-clock::before {
+    -webkit-mask-image: url("../images/clock.svg");
+}
+
+.icon-menu-signout::before {
+    visibility: hidden;
+}
+
+footer {
+    width: 100%;
+    align-content: center;
+    background: var(--bs-body-bg);
+    flex-shrink: 0;
+}
+
+    footer span, footer .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .ext-dashboard .dashboard-box .card-body .dx-styless-date footer input, footer .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card footer span.form-control, footer .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date footer span.form-control, footer .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group footer span.form-control, footer .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date footer span.form-control {
+        color: var(--csc-text-muted);
+    }
+
+    footer a {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: var(--csc-text-muted);
+    }
+
+        footer a:hover {
+            color: var(--csc-text-muted);
+            text-decoration: underline;
+        }
+
+    footer ul.footer-links {
+        float: right;
+        list-style: none;
+    }
+
+        footer ul.footer-links li {
+            display: inline-block;
+        }
+
+@media (max-width: 1199.98px) {
+    footer {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+        footer ul.footer-links {
+            float: none;
+        }
+
+            footer ul.footer-links li {
+                display: block;
+                padding-bottom: 0.5rem;
+            }
+}
+
+.page-content-wrapper {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.page-content-top {
+    flex: 1 0 auto !important;
+}
+
+.page-content-bottom {
+    flex-shrink: 0 !important;
+}
+
+.login-link {
+    color: #ffffff;
+}
+
+@media (min-width: 1199.98) {
+    .nav-mobile {
+        display: none;
+    }
+
+    .sidebar-base {
+        display: block;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .nav-mobile {
+        display: block;
+    }
+
+    .sidebar-base {
+        display: none;
+    }
+
+    .profile-bar-container {
+        margin-top: 75px;
+    }
+
+    .primary-menu {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+
+        .primary-menu .nav-item {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid #D5E5EB;
+        }
+
+            .primary-menu .nav-item .nav-link {
+                color: var(--bs-body-color) !important;
+            }
+}
+
+.tiles-container .no-link {
+    cursor: default !important;
+}
+
+.tiles-container .tile {
+    width: 100%;
+    height: 151px;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    border-radius: 5px;
+    border: 2px solid #42788f;
+}
+
+    .tiles-container .tile h5, .tiles-container .tile .h5 {
+        padding-top: 10px;
+        color: var(--bs-gray-100);
+    }
+
+    .tiles-container .tile .info {
+        font-size: smaller;
+    }
+
+    .tiles-container .tile .num-display {
+        font-family: "LatoWebBold", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 3rem;
+        color: var(--bs-primary);
+    }
+
+    .tiles-container .tile:last-child {
+        margin-bottom: 0 !important;
+    }
+
+.tiles-container .widgeticon {
+    width: 50%;
+    color: var(--bs-white);
+}
+
+    .tiles-container .widgeticon::after {
+        font-size: 6rem;
+    }
+
+.tiles-container div[class^=widgetbody-tile-] {
+    width: 50%;
+}
+
+.tiles-container .tile-event {
+    border-color: var(--bs-secondary);
+}
+
+    .tiles-container .tile-event .widgeticon {
+        background-color: var(--bs-secondary);
+        padding-top: 7px
+    }
+
+        .tiles-container .tile-event .widgeticon::after {
+            content: url("../images/calendar.svg");
+        }
+
+.tiles-container .tile-entities {
+    border-color: var(--bs-primary);
+}
+
+    .tiles-container .tile-entities .widgeticon {
+        background-color: var(--bs-primary);
+    }
+
+        .tiles-container .tile-entities .widgeticon::after {
+            content: url("../images/profile.svg");
+        }
+
+.tiles-container .tile-tasks {
+    border-color: #42788f;
+}
+
+    .tiles-container .tile-tasks .widgeticon {
+        background-color: #42788f;
+        padding-top: 12px;
+    }
+
+        .tiles-container .tile-tasks .widgeticon::after {
+            content: url("../images/ranking.svg");
+        }
+
+.tiles-container .tile-news {
+    border-color: #54585A;
+}
+
+    .tiles-container .tile-news .widgeticon {
+        background-color: #54585A;
+        padding-top: 10px;
+    }
+
+        .tiles-container .tile-news .widgeticon::after {
+            content: url("../images/stadium.svg");
+        }
+
+.tiles-container .tile-blog {
+    border-color: var(--bs-orange);
+}
+
+    .tiles-container .tile-blog .widgeticon {
+        background-color: var(--bs-orange);
+        padding-top: 10px;
+    }
+
+        .tiles-container .tile-blog .widgeticon::after {
+            content: url("../images/finance.svg");
+        }
+
+.tiles-container .tile-marketing {
+    border-color: var(--csc-blue-gray);
+}
+
+    .tiles-container .tile-marketing .widgeticon {
+        background-color: var(--csc-blue-gray);
+    }
+
+        .tiles-container .tile-marketing .widgeticon::after {
+            content: "\ea67";
+        }
+
+.tiles-container .tile-funds {
+    border-color: var(--bs-teal);
+}
+
+    .tiles-container .tile-funds .widgeticon {
+        background-color: var(--bs-teal);
+    }
+
+        .tiles-container .tile-funds .widgeticon::after {
+            content: "\e92d";
+        }
+
+.tiles-container .tile-wip {
+    border-color: var(--bs-green);
+}
+
+    .tiles-container .tile-wip .widgeticon {
+        background-color: var(--bs-green);
+    }
+
+        .tiles-container .tile-wip .widgeticon::after {
+            content: "\ea19";
+        }
+
+.ext-dashboard .card, .ext-dashboard .form-table-group {
+    box-shadow: none;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+    .ext-dashboard .card .card-header, .ext-dashboard .form-table-group .card-header {
+        background: transparent;
+        border-bottom: 1px solid #d5e5eb;
+    }
+
+.ext-dashboard .card-table .card-header {
+    background: var(--bs-primary) !important;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid var(--bs-primary);
+    border-bottom: none;
+}
+
+.ext-dashboard .card-table .card-body {
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #a5bfce;
+    border-top: none;
+}
+
+.middle-card {
+    min-height: 270px;
+}
+
+.ext-dashboard .dashboard-box {
+    background: var(--csc-grid-highlight);
+    border-radius: 5px;
+    border: 1px solid #a5bfce;
+    box-shadow: none;
+    padding: 1.5rem;
+    height: 360px;
+}
+
+    .ext-dashboard .dashboard-box .card-body {
+        min-height: 85px;
+    }
+
+        .ext-dashboard .dashboard-box .card-body .dx-styless-date {
+            margin: 0;
+            padding: 0;
+            margin-left: -4px;
+            display: inline-block;
+        }
+
+            .ext-dashboard .dashboard-box .card-body .dx-styless-date input, .ext-dashboard .dashboard-box .card-body .dx-styless-date .card span.form-control, .card .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control, .ext-dashboard .dashboard-box .card-body .dx-styless-date .form-table-group span.form-control, .form-table-group .ext-dashboard .dashboard-box .card-body .dx-styless-date span.form-control {
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                min-height: unset;
+            }
+
+.card-table .card-footer {
+    background: 0 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+
+.card-table .card-header {
+    color: var(--bs-body-bg);
+}
+
+.team-id {
+    margin-left: 5px;
+    font-size: medium;
+}
+
+.match-img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+/* USER LIST TABLE */
+.user-list tbody td > div > img {
+    position: relative;
+    max-width: 100px;
+    float: left;
+    margin-right: 15px;
+}
+
+.user-list tbody td .user-link {
+    display: block;
+    font-size: 1.25em;
+    padding-top: 3px;
+}
+
+.user-list tbody td .user-subhead {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/* TABLES */
+.table {
+    border-collapse: separate;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+    background-color: #eee;
+}
+
+.table thead > tr > th {
+    border-bottom: 1px solid #C2C2C2;
+    padding-bottom: 0;
+}
+
+.table tbody > tr > td {
+    font-size: 0.875em;
+    background: #f5f5f5;
+    border-top: 10px solid #fff;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+
+    .table tbody > tr > td:first-child,
+    .table thead > tr > th:first-child {
+        padding-left: 20px;
+    }
+
+.table thead > tr > th span {
+    border-bottom: 2px solid #C2C2C2;
+    display: inline-block;
+    padding: 0 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+}
+
+.table thead > tr > th > a span {
+    color: #344644;
+}
+
+    .table thead > tr > th > a span:after {
+        content: "\f0dc";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        margin-left: 5px;
+        font-size: 0.75em;
+    }
+
+.table thead > tr > th > a.asc span:after {
+    content: "\f0dd";
+}
+
+.table thead > tr > th > a.desc span:after {
+    content: "\f0de";
+}
+
+.table thead > tr > th > a:hover span {
+    text-decoration: none;
+    color: #2bb6a3;
+    border-color: #2bb6a3;
+}
+
+.table.table-hover tbody > tr > td {
+    -webkit-transition: background-color 0.15s ease-in-out 0s;
+    transition: background-color 0.15s ease-in-out 0s;
+}
+
+.table tbody tr td .call-type {
+    display: block;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.table tbody tr td .first-line {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 1.125em;
+}
+
+    .table tbody tr td .first-line span {
+        font-size: 0.875em;
+        color: #969696;
+        font-weight: 300;
+    }
+
+.table tbody tr td .second-line {
+    font-size: 0.875em;
+    line-height: 1.2;
+}
+
+.table a.table-link {
+    margin: 0 5px;
+    font-size: 1.125em;
+}
+
+    .table a.table-link:hover {
+        text-decoration: none;
+        color: #2aa493;
+    }
+
+    .table a.table-link.danger {
+        color: #fe635f;
+    }
+
+    .table a.table-link.sucess {
+        color: #29ad27;
+    }
+
+        .table a.table-link.danger:hover {
+            color: #dd504c;
+        }
+
+.table-products tbody > tr > td {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    -webkit-transition: background-color 0.15s ease-in-out 0s;
+    transition: background-color 0.15s ease-in-out 0s;
+    position: relative;
+}
+
+.table-products tbody > tr:hover > td {
+    text-decoration: none;
+    background-color: #f6f6f6;
+}
+
+.table-products .name {
+    display: block;
+    font-weight: 600;
+    padding-bottom: 7px;
+}
+
+.table-products .price {
+    display: block;
+    text-decoration: none;
+    width: 50%;
+    float: left;
+    font-size: 0.875em;
+}
+
+    .table-products .price > i {
+        color: #8dc859;
+    }
+
+.table-products .warranty {
+    display: block;
+    text-decoration: none;
+    width: 50%;
+    float: left;
+    font-size: 0.875em;
+}
+
+    .table-products .warranty > i {
+        color: #f1c40f;
+    }
+
+.table tbody > tr.table-line-fb > td {
+    background-color: #9daccb;
+    color: #262525;
+}
+
+.table tbody > tr.table-line-twitter > td {
+    background-color: #9fccff;
+    color: #262525;
+}
+
+.table tbody > tr.table-line-plus > td {
+    background-color: #eea59c;
+    color: #262525;
+}
+
+.table-stats .status-social-icon {
+    font-size: 1.9em;
+    vertical-align: bottom;
+}
+
+.table-stats .table-line-fb .status-social-icon {
+    color: #556484;
+}
+
+.table-stats .table-line-twitter .status-social-icon {
+    color: #5885b8;
+}
+
+.table-stats .table-line-plus .status-social-icon {
+    color: #a75d54;
+}
+
+.progress-bar {
+    background-color: #3b7291;
+}
+
+/*League*/
+.content-info {
+    background: #f9f9f9;
+    padding: 40px 0;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.league-table {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dedede;
+}
+
+    .league-table thead tr th {
+        padding: 20px;
+        border: 1px solid #dedede;
+        color: #000;
+    }
+
+    .league-table.table-striped tbody tr:nth-of-type(odd) {
+        background: #f9f9f9;
+    }
+
+    .league-table.result-point tr td.number {
+        width: 100px;
+        position: relative;
+    }
+
+.text-left {
+    text-align: left !important;
+}
+
+.league-table tr td {
+    padding: 10px 20px;
+    border: 1px solid #dedede;
+}
+
+.league-table.result-point tr td .fa.fa-caret-up {
+    color: green;
+}
+
+.league-table.result-point tr td .fa {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+.league-table tr td {
+    padding: 10px 40px;
+    border: 1px solid #dedede;
+}
+
+    .league-table tr td img {
+        max-width: 32px;
+        float: left;
+        margin-right: 11px;
+        margin-top: 1px;
+        border: 1px solid #dedede;
+    }
+/*End League*/
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.text-centered{
+    text-align: center;
+}

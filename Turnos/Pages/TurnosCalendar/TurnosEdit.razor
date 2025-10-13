@@ -1,0 +1,21 @@
+﻿@page "/turnos"
+
+@using Microsoft.AspNetCore.Identity
+@using Turnos.Domain.Entities
+@using Turnos.Model.UI;
+@using Turnos.Web.Pages.Appointments
+
+@inject DialogService DialogService
+
+<div class="ext-dashboard mt-lg-5 mt-xl-0">
+    <div class="row">
+        <RadzenScheduler @ref=@scheduler SlotRender=@OnSlotRender style="height: 768px;" TItem="AppointmentDto" Data=@appointments StartProperty="Start" EndProperty="End"
+                         TextProperty="Paciente" SelectedIndex="2"
+                         SlotSelect=@OnSlotSelect LoadData=@Refresh AppointmentSelect=@OnAppointmentSelect AppointmentRender=@OnAppointmentRender>
+            <RadzenDayView Text="Dia" />
+            <RadzenWeekView Text="Semana" />
+            <RadzenMonthView Text="Mes" />
+            <RadzenYearView Text="Año" />
+        </RadzenScheduler>
+    </div>
+</div>

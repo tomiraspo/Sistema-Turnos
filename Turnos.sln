@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.Domain", "Turnos.Domain\Turnos.Domain.csproj", "{2DD03CE9-212F-474F-9C70-ED84BEDEBE65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.Infrastructure.Persistence", "Turnos.Infrastructure.Persistence\Turnos.Infrastructure.Persistence.csproj", "{F35E878F-AEB6-4732-B266-57303E2926BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.SharedKernel", "Turnos.SharedKernel\Turnos.SharedKernel.csproj", "{D4712FEE-9FA7-4A6B-AE6D-03F78CD0A717}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.Application", "Turnos.Application\Turnos.Application.csproj", "{9D376BCE-9060-43D9-88A7-317885A80DE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.Model", "Turnos.Model\Turnos.Model.csproj", "{56845475-C4DD-43F3-A2A7-3FB2409C7BEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turnos.Web", "Turnos\Turnos.Web.csproj", "{4CC92FD9-2498-49E2-9F74-E4DB2232221A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DD03CE9-212F-474F-9C70-ED84BEDEBE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD03CE9-212F-474F-9C70-ED84BEDEBE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD03CE9-212F-474F-9C70-ED84BEDEBE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD03CE9-212F-474F-9C70-ED84BEDEBE65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35E878F-AEB6-4732-B266-57303E2926BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35E878F-AEB6-4732-B266-57303E2926BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35E878F-AEB6-4732-B266-57303E2926BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35E878F-AEB6-4732-B266-57303E2926BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4712FEE-9FA7-4A6B-AE6D-03F78CD0A717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4712FEE-9FA7-4A6B-AE6D-03F78CD0A717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4712FEE-9FA7-4A6B-AE6D-03F78CD0A717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4712FEE-9FA7-4A6B-AE6D-03F78CD0A717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D376BCE-9060-43D9-88A7-317885A80DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D376BCE-9060-43D9-88A7-317885A80DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D376BCE-9060-43D9-88A7-317885A80DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D376BCE-9060-43D9-88A7-317885A80DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56845475-C4DD-43F3-A2A7-3FB2409C7BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56845475-C4DD-43F3-A2A7-3FB2409C7BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56845475-C4DD-43F3-A2A7-3FB2409C7BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56845475-C4DD-43F3-A2A7-3FB2409C7BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC92FD9-2498-49E2-9F74-E4DB2232221A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC92FD9-2498-49E2-9F74-E4DB2232221A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC92FD9-2498-49E2-9F74-E4DB2232221A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC92FD9-2498-49E2-9F74-E4DB2232221A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EF61562-9AA6-4D03-AFCA-AB7F1F76B5EA}
+	EndGlobalSection
+EndGlobal

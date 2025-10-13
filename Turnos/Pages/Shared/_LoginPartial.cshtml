@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Turnos.Domain.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<div class="dropdown">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <button class="btn dropdown-toggle " aria-label="User Profile"
+            type="button" id="user-profile-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="align-bottom userbuttonname d-inline-block">Bienvenido</span>
+            <span title="@User.Identity?.Name!" class="align-bottom userbuttonname text-truncate d-inline-block">@User.Identity?.Name!</span>
+            <span class="align-bottom d-inline-block ms-2 me-3 profile-circle c-i-profile-solid"></span>
+        </button>
+
+        <ul class="dropdown-menu dropdown-profile" aria-labelledby="user-profile-dropdown">
+            <li>
+                <a class="nav-link" href="Identity/Account/LogOut">Cerrar Sesión</a>
+            </li>
+        </ul>
+    }
+    else
+    {
+        <ul style="display:flex; margin: 0 auto; list-style:none">
+            <li class="nav-item">
+                <a class="nav-link login-link" href="/Identity/Account/Register">Registrarse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link login-link" href="/Identity/Account/Login">Iniciar Sesión</a>
+            </li>
+        </ul>
+    }
+
+</div>

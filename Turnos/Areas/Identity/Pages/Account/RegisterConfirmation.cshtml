@@ -1,0 +1,23 @@
+﻿@page
+@using Turnos.Web.Areas.Identity.Pages.Account;
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Confirmacion de registro";
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <p>
+            Los Emails no estan configurados en esta version. Para activar la cuenta clickear el siguiente enlace: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click aqui para confirmar la cuenta</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            Please check your email to confirm your account.
+        </p>
+    }
+}
+

@@ -1,0 +1,168 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Turnos.Domain.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Turnos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/material-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <main class="d-flex flex-column">
+        <div class="site-content">
+            <div class="container-fluid g-0 h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-xl-2 d-xl-block">
+                        <div class="d-xl-block d-none fixed sidebar-base">
+                            <div class="sidebar primary-menu">
+                                <div class="sidebar-content-wrapper">
+                                    <div class="sidebar-content shadow-sm">
+                                        <nav class="navbar shadow main-nav navbar-expand-xl " id="primary-navigation">
+                                            <div class="" id="main_nav">
+                                                @if (SignInManager.IsSignedIn(User))
+                                                {
+                                                    <ul class="navbar-nav me-auto primary-nav">
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/">
+                                                                <span class="icon icon-menu icon-menu-home"></span> Home
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/turnos">
+                                                                <span class="icon icon-menu icon-menu-calendar"></span> Turnos
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/pacientes">
+                                                                <span class="icon icon-menu icon-menu-team"></span> Ingreso de Pacientes
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/profesionales">
+                                                                <span class="icon icon-menu icon-menu-medic"></span> Ingreso de Profesionales
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/parte">
+                                                                <span class="icon icon-menu icon-menu-notes"></span> Parte Diario
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item top-level scroll-item">
+                                                            <a class="nav-link" href="/licencias">
+                                                                <span class="icon icon-menu icon-menu-clock"></span> Licencias
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                }
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-xl-none nav-mobile primary-menu">
+                            <div class="container-fluid">
+                                <div class="logo ps-3">
+                                </div>
+
+                                <div class="logo">
+                                </div>
+
+                                <button id="btnNavToggle" class="navbar-toggler collapsed ps-3"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#primary_nav" aria-controls="primary_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"><span class="header-icon c-i-hamburger-menu"></span></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="primary_nav">
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        <ul class="navbar-nav me-auto primary-nav">
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/">
+                                                    <span class="icon icon-menu icon-menu-home"></span> Home
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/turnos">
+                                                    <span class="icon icon-menu icon-menu-calendar"></span> Turnos
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/pacientes">
+                                                    <span class="icon icon-menu icon-menu-team"></span> Ingreso de Pacientes
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/profesionales">
+                                                    <span class="icon icon-menu icon-menu-medic"></span> Ingreso de Profesionales
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/parte">
+                                                    <span class="icon icon-menu icon-menu-notes"></span> Parte Diario
+                                                </a>
+                                            </li>
+                                            <li class="nav-item top-level scroll-item">
+                                                <a class="nav-link" href="/licencias">
+                                                    <span class="icon icon-menu icon-menu-clock"></span> Licencias
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    }
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10">
+                        <div class="page-content-wrapper">
+                            <div class="page-content-top">
+                                <div class="profile-bar-container shadow-sm mb-0">
+                                    <div class="profile-bar">
+                                        <div class="row g-0">
+                                            <div class="col-xxl-9 col-xl-8 col-lg-7 col-3">
+                                                <div class="profile-content ps-3">
+                                                    <!--TODO: Agregar breadcrumb-->
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-3 col-xl-4 col-lg-5 col-9">
+                                                <div class="profile-user">
+
+                                                    @(await Html.PartialAsync("_LoginPartial"));
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 p-4">
+                                    <div class="col-12">
+                                        <div class="page-content">
+                                            @RenderBody()
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content-bottom">
+                                <footer class="footer">
+                                    
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
