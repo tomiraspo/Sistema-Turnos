@@ -15,7 +15,9 @@
                    
                     <div class="col-md-6">
                         <div style="text-align:center">
-                            <img style="display: inline-block" src="~/images/ioba.png" alt="welcome" />
+                            <img style="display: inline-block; max-width: 200px; height: auto;"
+                                 src="~/images/empresa.png"
+                                 alt="Logo de Instituto Oftalmológico" />
                             <h2>Muchas gracias por visitarnos!</h2>
 
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
@@ -24,7 +26,9 @@
                         </div>
                     </div>
                     <div class="col-md-6" style="text-align:center">
-                        <img src="~/images/nene.png" style="width:100%" alt="welcome" />
+                        <img src="~/images/imagen3.jpg"
+                             alt="welcome"
+                             style="width:100%; max-height: 400px; object-fit: cover;" />
                     </div>
                 </div>
             </div>
