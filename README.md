@@ -1,27 +1,29 @@
-#👁️ Sistema de Gestión de Turnos Oftalmológicos
+# 👁️ Sistema de Gestión de Turnos Oftalmológicos
 
-## Este es un Sistema Integral para la Gestión de Turnos Virtuales desarrollado para clínicas y consultorios oftalmológicos.
+Sistema integral para la gestión de turnos virtuales desarrollado 
+para clínicas y consultorios oftalmológicos. Aplicación web completa 
+y escalable construida con Clean Architecture y diseño modular.
 
-Aplicación web completa y escalable, utilizando el stack de .NET con un enfoque en Clean Architecture y un diseño modular y moderno.
- 
-La solución permite la gestión de agendas, el registro de pacientes y la administración de citas en tiempo real.
+Permite gestión de agendas, registro de pacientes y administración 
+de citas en tiempo real.
 
 ## 🛠️ Stack Tecnológico
+- **Lenguaje:** C#
+- **Framework:** ASP.NET Core
+- **Frontend:** Blazor Server
+- **Base de Datos:** SQL Server
+- **UI Components:** Radzen Blazor
+- **Arquitectura:** Clean Architecture · DDD · Dependency Injection
 
-* **Lenguaje:** C#
-* **Framework:** .NET (ASP.NET Core)
-* **Frontend:** Blazor Web (Turnos.Web)
-* **Base de Datos:** SQL Server
-* **Componentes UI:** Radzen Blazor
+## 📁 Estructura del Proyecto
+- `Turnos.Domain` — Entidades y lógica de negocio
+- `Turnos.Application` — Casos de uso y servicios
+- `Turnos.Infrastructure.Persistence` — Acceso a datos
+- `Turnos.SharedKernel` — Componentes compartidos
+- `Turnos.Model` — Modelos de datos
 
----
+## 👨‍💻 Autor
+Tomas Raspo — [LinkedIn](https://www.linkedin.com/in/tomás-raspo-b03028214/)
 
-## 💡 Nota
-
-Este proyecto ha sido **re-factorizado, limpiado, y personalizado** sobre un código base funcional para servir como demostración de mis habilidades con Blazor y **desarrollo full-stack con .NET**.
-
----
-
-## 👨‍💻 Autoría y Licencia
-
-**Mantenimiento:** Tomas Raspo
+## 📄 Licencia
+MIT License
