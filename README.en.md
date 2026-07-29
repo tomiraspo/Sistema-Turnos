@@ -1,35 +1,30 @@
 [Español](README.md) | **English**
 # 👁️ Ophthalmic Appointment Management System
-An end-to-end virtual appointment management system built for ophthalmic clinics and practices. A full-featured, scalable web application designed with Clean Architecture and a modular approach.
 
-It enables schedule management, patient registration, and real-time appointment administration.
+Comprehensive system for virtual appointment management developed 
+for ophthalmic clinics and practices. Complete and scalable 
+web application built with Clean Architecture and modular design.
 
-🛠️ Tech Stack
-Language: C#
+Enables schedule management, patient registration, and real-time 
+appointment administration.
 
-Framework: ASP.NET Core
+## 🛠️ Tech Stack
+- **Language:** C#
+- **Framework:** ASP.NET Core
+- **Frontend:** Blazor Server
+- **Database:** SQL Server
+- **UI Components:** Radzen Blazor
+- **Architecture:** Clean Architecture · DDD · Dependency Injection
 
-Frontend: Blazor Server
+## 📁 Project Structure
+- `Turnos.Domain` — Entities and core business logic
+- `Turnos.Application` — Use cases and application services
+- `Turnos.Infrastructure.Persistence` — Data access layer
+- `Turnos.SharedKernel` — Shared components and abstractions
+- `Turnos.Model` — Data models
 
-Database: SQL Server
+## 👨‍💻 Author
+Tomas Raspo — [LinkedIn](https://www.linkedin.com/in/tomás-raspo-b03028214/)
 
-UI Components: Radzen Blazor
-
-Architecture: Clean Architecture · DDD · Dependency Injection
-
-📁 Project Structure
-Turnos.Domain — Entities and core business logic
-
-Turnos.Application — Use cases and application services
-
-Turnos.Infrastructure.Persistence — Data access layer
-
-Turnos.SharedKernel — Shared components and abstractions
-
-Turnos.Model — Data models
-
-👨‍💻 Author
-Tomas Raspo — LinkedIn: https://www.linkedin.com/in/tomas-raspo/
-
-📄 License
-This project is licensed under the MIT License.
+## 📄 License
+MIT License
