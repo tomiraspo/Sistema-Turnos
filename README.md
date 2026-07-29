@@ -1,3 +1,4 @@
+**Español** | [English](README.md)
 # 👁️ Sistema de Gestión de Turnos Oftalmológicos
 
 Sistema integral para la gestión de turnos virtuales desarrollado 
