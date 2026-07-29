@@ -24,7 +24,7 @@ appointment administration.
 - `Turnos.Model` — Data models
 
 ## 👨‍💻 Author
-Tomas Raspo — [LinkedIn](https://www.linkedin.com/in/tomás-raspo-b03028214/)
+Tomas Raspo — LinkedIn: https://www.linkedin.com/in/tomas-raspo/
 
 ## 📄 License
 MIT License
